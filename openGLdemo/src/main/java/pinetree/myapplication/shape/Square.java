@@ -62,8 +62,8 @@ public class Square {
         //an array of vertex
         // coordinates to use when rendering.
         //gl10.glTranslatef(1,0,0);// 平移的是当前图形的一倍 是1,2 是两倍。所以平移在缩放，和缩放后在平移是不同的
-        gl10.glScalef(0.5f, 0.5f, 0.5f);
-        gl10.glRotatef(45,0,0,0.5f);
+        //gl10.glScalef(0.5f, 0.5f, 0.5f);
+        //gl10.glRotatef(45,0,0,0.5f);
         /**
          * size:
 
