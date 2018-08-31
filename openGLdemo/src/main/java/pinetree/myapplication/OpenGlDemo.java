@@ -109,8 +109,6 @@ public class OpenGlDemo extends AppCompatActivity {
             gl.glPopMatrix();
             // Increse the angle.
             angle++;
-
-
         }
     }
 
