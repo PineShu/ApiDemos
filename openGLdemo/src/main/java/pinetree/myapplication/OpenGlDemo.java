@@ -16,6 +16,10 @@ public class OpenGlDemo extends AppCompatActivity {
 
     private Square square;
 
+    private Square squareB;
+
+    private int angle = 10;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +45,7 @@ public class OpenGlDemo extends AppCompatActivity {
             gl.glHint(GL10.GL_PERSPECTIVE_CORRECTION_HINT, // OpenGL docs.
                     GL10.GL_NICEST);
             square = new Square();
+            squareB = new Square();
         }
 
         @Override
@@ -65,8 +70,46 @@ public class OpenGlDemo extends AppCompatActivity {
             gl.glClear(GL10.GL_COLOR_BUFFER_BIT | // OpenGL docs.
                     GL10.GL_DEPTH_BUFFER_BIT);
             gl.glLoadIdentity();
-            gl.glTranslatef(0, 0, -4);
+            //沿着Z 轴 平移 -10
+            gl.glTranslatef(0, 0, -10);
+            //保存当前矩阵
+            gl.glPushMatrix();
+            // 以Z轴为中心z>0&&angle>0逆时针旋转,z>0&&angle<0,顺时针旋转
+            gl.glRotatef(angle, 0, 0, 1);
             square.draw(gl);
+
+            //恢复保存的矩阵状态
+            gl.glPopMatrix();
+
+            //squareB
+            gl.glPushMatrix();
+            //顺时针旋转
+            gl.glRotatef(-angle,0,0,1);
+            //沿着X轴方向平移两倍
+            gl.glTranslatef(2,0,0);
+            //缩小一半
+            gl.glScalef(0.5f,0.5f,0.5f);
+            //draw square b
+            square.draw(gl);
+            // source c
+            gl.glPushMatrix();
+
+            // Make the rotation around B
+            gl.glRotatef(-angle, 0, 0, 1);
+            gl.glTranslatef(2, 0, 0);
+            // Scale it to 50% of square B
+            gl.glScalef(.5f, .5f, .5f);
+            // Rotate around it's own center.
+            gl.glRotatef(angle*10, 0, 0, 1);
+            // Draw square C.
+            //square.draw(gl);
+            // Restore to the matrix as it was before C.
+            gl.glPopMatrix();
+            // Restore to the matrix as it was before B.
+            gl.glPopMatrix();
+            // Increse the angle.
+            angle++;
+
 
         }
     }
