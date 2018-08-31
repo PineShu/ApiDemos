@@ -5,4 +5,5 @@ package pinetree.myapplication.shape;
  */
 
 public class ColorShape extends Square {
+
 }
