@@ -1,0 +1,28 @@
+{
+    "logs": [
+        {
+            "outputFile": "F:\\ApiDemo\\ApiDemos\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+            "map": [
+                {
+                    "source": "F:\\ApiDemo\\ApiDemos\\app\\src\\main\\res\\values-sw600dp\\layout.xml",
+                    "from": {
+                        "startLines": "19",
+                        "startColumns": "4",
+                        "startOffsets": "836",
+                        "endLines": "20",
+                        "endColumns": "60",
+                        "endOffsets": "952"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "3",
+                        "endColumns": "60",
+                        "endOffsets": "170"
+                    }
+                }
+            ]
+        }
+    ]
+}

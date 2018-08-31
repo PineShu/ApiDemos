@@ -1,0 +1,43 @@
+{
+    "logs": [
+        {
+            "outputFile": "F:\\ApiDemo\\ApiDemos\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v14\\values-v14.xml",
+            "map": [
+                {
+                    "source": "F:\\ApiDemo\\ApiDemos\\app\\src\\main\\res\\values-v14\\styles.xml",
+                    "from": {
+                        "startLines": "20",
+                        "startColumns": "4",
+                        "startOffsets": "810",
+                        "endColumns": "77",
+                        "endOffsets": "883"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "108",
+                        "endColumns": "76",
+                        "endOffsets": "180"
+                    }
+                },
+                {
+                    "source": "F:\\ApiDemo\\ApiDemos\\app\\src\\main\\res\\values-v14\\bools.xml",
+                    "from": {
+                        "startLines": "18",
+                        "startColumns": "4",
+                        "startOffsets": "767",
+                        "endColumns": "52",
+                        "endOffsets": "815"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "52",
+                        "endOffsets": "103"
+                    }
+                }
+            ]
+        }
+    ]
+}
