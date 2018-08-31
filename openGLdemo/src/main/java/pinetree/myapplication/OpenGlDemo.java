@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
+import pinetree.myapplication.shape.SmoothColor;
 import pinetree.myapplication.shape.Square;
 
 public class OpenGlDemo extends AppCompatActivity {
@@ -15,8 +16,6 @@ public class OpenGlDemo extends AppCompatActivity {
     private GLSurfaceView glSurfaceView;
 
     private Square square;
-
-    private Square squareB;
 
     private int angle = 10;
 
@@ -44,8 +43,8 @@ public class OpenGlDemo extends AppCompatActivity {
             // Really nice perspective calculations.
             gl.glHint(GL10.GL_PERSPECTIVE_CORRECTION_HINT, // OpenGL docs.
                     GL10.GL_NICEST);
-            square = new Square();
-            squareB = new Square();
+            square = new SmoothColor();
+
         }
 
         @Override
@@ -84,11 +83,11 @@ public class OpenGlDemo extends AppCompatActivity {
             //squareB
             gl.glPushMatrix();
             //顺时针旋转
-            gl.glRotatef(-angle,0,0,1);
+            gl.glRotatef(-angle, 0, 0, 1);
             //沿着X轴方向平移两倍
-            gl.glTranslatef(2,0,0);
+            gl.glTranslatef(2, 0, 0);
             //缩小一半
-            gl.glScalef(0.5f,0.5f,0.5f);
+            gl.glScalef(0.5f, 0.5f, 0.5f);
             //draw square b
             square.draw(gl);
             // source c
@@ -100,9 +99,9 @@ public class OpenGlDemo extends AppCompatActivity {
             // Scale it to 50% of square B
             gl.glScalef(.5f, .5f, .5f);
             // Rotate around it's own center.
-            gl.glRotatef(angle*10, 0, 0, 1);
+            gl.glRotatef(angle * 10, 0, 0, 1);
             // Draw square C.
-            //square.draw(gl);
+            square.draw(gl);
             // Restore to the matrix as it was before C.
             gl.glPopMatrix();
             // Restore to the matrix as it was before B.

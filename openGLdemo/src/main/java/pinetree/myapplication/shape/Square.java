@@ -13,7 +13,7 @@ import javax.microedition.khronos.opengles.GL10;
 
 public class Square {
     //顶点
-    private float vertices[] = {
+    protected float vertices[] = {
             -1f, 1f, 0,//top left
             -1, -1, 0,//bottom left
             1, -1, 0,//bottom right
@@ -22,7 +22,7 @@ public class Square {
     //顶点的链接顺序
     private short[] indices = {0, 1, 2, 0, 2, 3};
     //顶点数组
-    private FloatBuffer vertexBuffer;
+    protected FloatBuffer vertexBuffer;
     //连接点数组
     private ShortBuffer indexBuffer;
 
